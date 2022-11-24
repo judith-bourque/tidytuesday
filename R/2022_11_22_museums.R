@@ -27,13 +27,16 @@ museums_tidy <- museums %>%
 
 # Create graph data -------------------------------------------------------
 
-#remove rows with NA value in x column
+# Remove rows with NA value in x column
 museums_not_na <- museums_tidy
 museums_not_na <- museums_not_na[!(is.na(museums_not_na$governance_cat)), ]
 museums_not_na <- museums_not_na[!(is.na(museums_not_na$governance_subcat)), ]
 museums_not_na <- museums_not_na[!(is.na(museums_not_na$size)), ]
 
+# Consolidate data into smaller groups
+museums_consolidate <- museums_not_na %>%
+  mutate(size = gsub("large", "huge", size))
 
 # Visualize data ----------------------------------------------------------
 
-
+ggplot()
