@@ -21,13 +21,17 @@ museums_tidy <- museums %>%
     governance_subcat = str_to_lower(governance_subcat)
   ) %>%
   mutate(
-    governance_subcat = gsub("_", " ", governance_subcat)
+    governance_subcat = gsub("_", " ", governance_subcat),
+    size = factor(size, levels = c("small", "medium", "large", "huge"))
   )
-
 
 # Create graph data -------------------------------------------------------
 
-
+#remove rows with NA value in x column
+museums_not_na <- museums_tidy
+museums_not_na <- museums_not_na[!(is.na(museums_not_na$governance_cat)), ]
+museums_not_na <- museums_not_na[!(is.na(museums_not_na$governance_subcat)), ]
+museums_not_na <- museums_not_na[!(is.na(museums_not_na$size)), ]
 
 
 # Visualize data ----------------------------------------------------------
