@@ -21,7 +21,7 @@ data <- species %>%
 
 ggplot(data, aes(x = meanhfl, y = meanwgt, group = diet, colour = diet)) +
   geom_point() +
-  stat_smooth(method = "lm")+
+  stat_smooth(method = "lm", se = FALSE) +
   xlab("Mean weight") +
   ylab("Mean hindfoot length") +
   labs(title = "",
