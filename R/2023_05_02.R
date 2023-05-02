@@ -34,7 +34,7 @@ ggplot(data, aes(x = meanhfl, y = meanwgt, group = diet, colour = diet)) +
     axis.line = element_line(colour = "grey"))
 
 ggsave(
-  "graph/2023-05-02.png",
+  "graph/2023_05_02.png",
   width = 7,
   height = 5,
   units = "in"

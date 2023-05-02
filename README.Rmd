@@ -20,7 +20,7 @@ The goal of tidytuesday is to share the code behind my graphs for tidytuesday.
 
 ## 2023-05-02
 
-![](graph/2023-05-02.png)
+![](graph/2023_05_02.png)
 
 ## 2023-04-25
 
