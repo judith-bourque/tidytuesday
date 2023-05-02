@@ -19,8 +19,10 @@ data <- species %>%
   mutate(diet = case_when(granivore == 1 ~ "granivore",
                           .default = as.character("unspecified")))
 
-ggplot(data, aes(x = meanhfl, y = meanwgt, colour = diet)) +
+ggplot(data, aes(x = meanhfl, y = meanwgt, group = diet, colour = diet)) +
   geom_point() +
-  gghighlight(diet == "granivore", label_key = commonname) +
+  stat_smooth(method = "lm")+
   xlab("Mean weight") +
-  ylab("Mean hindfoot length")
+  ylab("Mean hindfoot length") +
+  labs(title = "",
+       subtitle = "Granivores tend to be heavier and shorter than animals with other diet types.")
