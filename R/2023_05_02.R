@@ -35,7 +35,7 @@ ggplot(data, aes(x = meanhfl, y = meanwgt, group = diet, colour = diet)) +
 
 ggsave(
   "graph/2023-05-02.png",
-  width = 6,
-  height = 6,
+  width = 7,
+  height = 5,
   units = "in"
 )
