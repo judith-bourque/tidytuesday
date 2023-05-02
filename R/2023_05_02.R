@@ -26,7 +26,7 @@ ggplot(data, aes(x = meanhfl, y = meanwgt, group = diet, colour = diet)) +
   ylab("Mean hindfoot length") +
   labs(title = "",
        subtitle = "Granivores tend to be heavier and shorter than animals with other diet types.") +
-  scale_colour_discrete(type = c("brown", "black")) +
+  scale_colour_discrete(type = c("darkorange", "grey")) +
   theme_classic() +
   theme(
     axis.ticks = element_line(colour = "grey"),
