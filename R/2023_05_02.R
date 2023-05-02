@@ -21,5 +21,6 @@ data <- species %>%
 
 ggplot(data, aes(x = meanhfl, y = meanwgt, colour = diet)) +
   geom_point() +
+  gghighlight(diet == "granivore", label_key = commonname) +
   xlab("Mean weight") +
   ylab("Mean hindfoot length")
