@@ -20,4 +20,6 @@ data <- species %>%
 
 ggplot(data, aes(x = meanhfl, y = meanwgt))+
   geom_point() +
-  gghighlight(granivore > 0)
+  gghighlight(granivore > 0) +
+  xlab("Mean weight") +
+  ylab("Mean hindfoot length")
