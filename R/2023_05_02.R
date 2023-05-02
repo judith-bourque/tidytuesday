@@ -16,10 +16,10 @@ species <- tuesdata$species
 surveys <- tuesdata$surveys
 
 data <- species %>%
-  mutate()
+  mutate(diet = case_when(granivore == 1 ~ "granivore",
+                          .default = as.character("unspecified")))
 
-ggplot(data, aes(x = meanhfl, y = meanwgt))+
+ggplot(data, aes(x = meanhfl, y = meanwgt, colour = diet)) +
   geom_point() +
-  gghighlight(granivore > 0) +
   xlab("Mean weight") +
   ylab("Mean hindfoot length")
