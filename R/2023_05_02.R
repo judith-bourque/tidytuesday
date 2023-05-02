@@ -16,5 +16,5 @@ surveys <- tuesdata$surveys
 
 data <- species
 
-ggplot(data, aes(x = meanhfl, y = meanwgt))+
+ggplot(data, aes(x = meanhfl, y = meanwgt, colour = granivore))+
   geom_point()
