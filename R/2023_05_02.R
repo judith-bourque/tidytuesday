@@ -26,7 +26,7 @@ ggplot(data, aes(x = meanhfl, y = meanwgt, group = diet, colour = diet)) +
   ylab("Mean hindfoot length") +
   labs(title = "A Rodent's Diet",
        subtitle = "Granivores tend to be heavier and shorter than rodents with other diet types.",
-       caption = "Data: \nGraphic: github.com/judith-bourque")) +
+       caption = "Data: The Portal Project\nGraphic: github.com/judith-bourque") +
   scale_colour_discrete(type = c("darkorange", "grey")) +
   theme_classic() +
   theme(
